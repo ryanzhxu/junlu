@@ -45,6 +45,17 @@
       integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
       crossorigin="anonymous"
     ></script>
+
+    <!-- Nav menu -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        fetch("./shared/nav-menu.html")
+          .then((response) => response.text())
+          .then((data) => {
+            document.querySelector(".nav-menu-container").innerHTML = data;
+          });
+      });
+    </script>
   </head>
 
   <body style="display: grid; text-align: center; margin: 2%">
@@ -52,42 +63,22 @@
       Antony (Jun) Lu
     </h1>
 
-    <div class="nav-menu-container">
-      <div class="nav-menu">
-        <button
-          class="btn btn-dark"
-          onclick="window.location.href='index.html'"
-        >
-          About Me
-        </button>
-        <button
-          class="btn btn-dark"
-          onclick="window.location.href='resume.html'"
-        >
-          Resume
-        </button>
-        <button
-          class="btn btn-dark"
-          onclick="window.location.href='papers.html'"
-        >
-          Past Papers/Dissertations
-        </button>
-        <button
-          class="btn btn-dark"
-          onclick="window.location.href='gallery.html'"
-        >
-          Photo Gallery
-        </button>
-      </div>
-    </div>
+    <div class="nav-menu-container"></div>
 
-    <!-- Resume Section -->
-    <div style="margin: 5% auto; max-width: 60%">
-      <img
-        src="resume-placeholder.png"
-        alt="Resume of Antony (Jun) Lu"
-        style="width: 100%; height: auto"
-      />
+    <div
+      class="index-bottom-section"
+      style="position: relative; width: 100%; box-sizing: border-box"
+    >
+      <div class="resume-background"></div>
+
+      <!-- Resume Section -->
+      <div style="margin: 5% auto; max-width: 60%">
+        <img
+          src="../images/resume-placeholder.png"
+          alt="Resume of Antony (Jun) Lu"
+          style="width: 100%; height: auto"
+        />
+      </div>
     </div>
   </body>
 </html>
