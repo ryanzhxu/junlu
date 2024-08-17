@@ -48,7 +48,14 @@
     <!-- Script to trigger modal on page load -->
     <script>
       $(document).ready(function () {
-        $("#welcomeModal").modal("show");
+        // Check if the modal has already been shown
+        if (!localStorage.getItem("welcomeModalShown")) {
+          // If not, show the modal
+          $("#welcomeModal").modal("show");
+
+          // Set the flag in localStorage
+          localStorage.setItem("welcomeModalShown", "true");
+        }
       });
     </script>
   </head>
@@ -58,7 +65,7 @@
       Antony (Jun) Lu
     </h1>
 
-    <div class="nav-menu" style="margin-bottom: 100px">
+    <div class="nav-menu-container">
       <div class="nav-menu">
         <button
           class="btn btn-dark"
@@ -89,14 +96,54 @@
 
     <div
       class="index-bottom-section"
-      style="display: flex; justify-content: center; gap: 30%"
+      style="
+        display: flex;
+        width: 100%;
+        box-sizing: border-box;
+        background-image: url('./images/page_1.jpg');
+      "
     >
-      <div class="bottom-section-left">
-        <div class="about-me">About me place holder</div>
+      <div class="about-me" style="width: 50%">
+        <p style="text-align: left; line-height: 1.5">
+          Hello and welcome to my personal website! I recently graduated from
+          the University of Oxford with an MSc in Economic and Social History.
+          My research explored the impact of Canada's railway network on
+          economic development and demographic distribution from 1850 to 1950—a
+          topic that I found fascinating. Before my studies in the UK, I
+          completed my undergraduate degree at Rotman Commerce, University of
+          Toronto, where I specialized in Finance and Economics and minored in
+          History. I earned my Bachelor of Commerce degree in 2022. Throughout
+          my academic journey, I have been passionate about using economic
+          theories and econometrics to deepen our understanding of history. I'm
+          also grateful for the opportunities I've had to apply this knowledge
+          in real-world settings through various internships and work placement
+          programme. I invite you to explore my resume and some of my past
+          essays and papers, which are featured on the following pages. In my
+          free time, I love travelling to scenic places, and I capture these
+          moments through photography. Feel free to take a look at my Photo
+          Gallery!
+        </p>
       </div>
-      <div class="bottom-section-right" style="display: grid; gap: 50%">
-        <div class="profile">profile place holder</div>
-        <div class="racoon-placeholder">racoon place holder</div>
+      <div
+        class="profile-image"
+        style="
+          width: 50%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          overflow: hidden;
+        "
+      >
+        <img
+          src="./images/profile.jpg"
+          alt="Profile Image"
+          style="
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            object-position: top;
+          "
+        />
       </div>
     </div>
 
