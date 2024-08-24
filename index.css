@@ -10,24 +10,42 @@
 }
 
 .about-me {
-  width: auto;
+  width: 50%;
   height: auto;
   margin: 0 auto;
   text-align: center;
   display: flex;
   justify-content: center;
   box-sizing: border-box;
+  color: white;
+
+  p {
+    text-align: left;
+    line-height: 1.5;
+  }
+}
+
+.profile-image {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 2px;
 }
 
 .index-bottom-section {
+  display: flex;
   background-size: 100% 100%;
   background-position: center;
   background-repeat: no-repeat;
   min-height: 100vh;
   width: 100%;
+  box-sizing: border-box;
   overflow-y: auto;
   padding: 2%;
   gap: 1%;
+  border-radius: 2px;
 }
 
 .resume-background {
