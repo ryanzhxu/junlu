@@ -9,10 +9,9 @@
   margin-bottom: 0.5%;
 }
 
-.about-me {
+.index-left-section {
   width: 50%;
   height: auto;
-  margin: 0 auto;
   text-align: center;
   display: flex;
   justify-content: center;
@@ -23,6 +22,13 @@
     text-align: left;
     line-height: 1.5;
   }
+}
+
+.index-right-section {
+  width: 50%;
+  display: ruby;
+  justify-items: center;
+  align-items: center;
 }
 
 .profile-image {
